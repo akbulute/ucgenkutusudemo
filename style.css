@@ -1,0 +1,343 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(245, 217, 180);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body h2 {
+    margin: 40px;
+    font-size: 25px;
+    /* background-color:azure;
+    height: 30px;
+    max-width: 70%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 30px auto; */
+    
+}
+
+body::before {
+  content: "📢 Bu sayfa bir demodur. Telif hakkı Geliştiriciye aittir.";
+  position: fixed;
+  top: 0;    /*en tepeye sabitlenmesi gerektiğini belirttik*/
+  left: 0;
+  width: 100%;
+  background-color: #ffc;
+  color: #222;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  z-index: 9999;
+}
+
+h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 200;
+}
+
+p {
+    font-size: 17px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: rgb(183, 129, 20);
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    min-height: 50px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: wheat;
+    margin: 0;
+    padding: 0 9px;
+}
+
+.navbar > li {
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar > li > a {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar > li > a:not(.nohover):hover {
+    background-color: peru;
+}
+
+/* Home icon döndürme */
+.navbar li.döndür a i {
+    display: inline-block;
+    transition: transform 3s ease;
+    font-size: 24px;
+}
+
+.navbar li.döndür a:hover i {
+    transform: rotate(360deg);
+}
+
+/* Dropdown menüsü */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(178, 107, 35);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 150px;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: peru;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown > a::after {
+    content: " ▼";
+    font-size: 12px;
+    padding-left: 5px;
+    display: inline-block;
+    transition: transform 0.6s ease;
+}
+
+.dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+
+.paragraf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#paragraf {
+    padding: 30px;
+    text-align: center;
+}
+
+img {
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+/* Video stilleri */
+.video-content {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-box {
+    background-color: rgb(227, 159, 92);
+    border-radius: 10px;
+    width: 270px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+box-sizing: border-box;
+    /* overflow-y: scroll; */
+    overflow-x: hidden;
+}
+
+.video-box > img {
+    height: 400px;
+    width: inherit;
+}
+/* hakkında */
+
+.hakkında{
+
+    margin: 70px;
+    background-color: azure;
+    align-self: center;
+    padding:20px 50px ;
+    width: 400px;
+    border-radius:60px;
+
+}
+
+/* Contact */
+#iletisim {
+    background-color: #fff3e0;
+}
+
+.contact {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    color: rgb(101, 67, 33);
+}
+
+.contact h2 {
+    padding: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact form input,
+.contact form textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact form input:hover,
+.contact form textarea:hover {
+    background-color: rgb(229, 227, 227);
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: none;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    border: none;
+    background: rgb(175, 96, 17);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.contact form button:hover {
+    background: rgb(244, 167, 91);
+}
+
+/* Footer */
+footer {
+    min-height: 135px;
+    color: whitesmoke;
+    text-transform: capitalize;
+    text-align: center;
+    background-color: peru;
+    padding-top: 30px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .social a {
+    padding: 20px;
+    text-decoration: none;
+}
+
+footer .social p {
+    padding: 10px;
+}
+
+footer .social ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+footer .social li {
+    display: block;
+}
+
+footer i {
+    color: wheat;
+    font-size: 30px;
+}
+
+/* Telefon uyumluluğu */
+@media(max-width: 600px) {
+    p {
+        font-size: 13px;
+    }
+
+    img {
+        margin: 30px;
+        min-width: 350px;
+        border-radius: 5px;
+    }
+
+    .navbar li a {
+        font-size: 14px;
+    }
+
+    .navbar li.döndür a i {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .contact form {
+        gap: 6px;
+        max-width: 350px;
+    }
+
+    .contact form button {
+        width: 300px;
+        align-self: center;
+    }
+    .hakkında {
+        margin: 50px;
+        max-width: 300px;
+    }
+    .hakkında p{
+        font-size: 16px;
+        line-height: 21px;
+    }
+}
+
